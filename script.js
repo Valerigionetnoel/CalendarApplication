@@ -36,17 +36,21 @@ $(document).ready(function () {
   // $('hour-9').css('background-color', 'blue')
   for (var i = 0; i < hours.length; i++){
     var timeBlockHour = hours[i]
-    // console.log(timeBlockHour)
+   console.log(timeBlockHour)
     if (currentDay.hour() > timeBlockHour){
-      console.log(timeBlockHour)
+      console.log('past')
       $(this).addClass('past')
     } else if (currentDay.hour() === timeBlockHour) {
       $(this).addClass('present')
+      console.log('present')
     }else {
       $(this).addClass('future')
+      console.log('future')
     }
   }
   
+
+  `hour-${timeBlockHour}`
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
